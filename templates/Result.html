@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emotion Prediction Result</title>
+	<style>
+		/* Set the background color of the page */
+body {
+  background-color: #7C9070;
+}
+
+/* Style the header */
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+/* Style the result */
+p {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+strong {
+  color: indianred;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Emotion Prediction Result</h1>
+	<p>The predicted emotion for the input journal entry is <strong>{{ emotion }}</strong>.</p>
+{% if count >= 3 %}
+	<p>you have been experiencing more <strong>{{ emotion }}</strong> lately.</p>
+{% endif %}
+{% if count >= 3 and (emotion =="anger" or emotion == "sadness=") %}
+	<p>We recommend a therapy session with a professional</p>
+{% endif %}
+
+</body>
+</html>
