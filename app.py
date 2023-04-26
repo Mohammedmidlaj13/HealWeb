@@ -132,6 +132,10 @@ def get_output():
 
     return render_template("Result.html",emotion = emo,count=c)
 
+@app.route("/book", methods = ['GET', 'POST'])
+def booking():
+    if request.method == 'POST':
+        return render_template("index.html")
 
 
 if __name__ =='__main__':

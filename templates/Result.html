@@ -22,9 +22,20 @@ p {
   text-align: center;
   margin-top: 50px;
 }
+  .form-button {
+                width: 30%;
+	  			margin-left: 35%;
+                border-radius: 16px;
+                border: 0;
+                background: #2e6930;
+                height: 40px;
+                margin-top: 36px;
+                color: #fff;
+            }
+
 
 strong {
-  color: indianred;
+  color: black;
 }
 
 	</style>
@@ -37,6 +48,10 @@ strong {
 {% endif %}
 {% if count >= 3 and (emotion =="anger" or emotion == "sadness=") %}
 	<p>We recommend a therapy session with a professional</p>
+	<form method="post" action="/book">
+		<input type="submit" value="Book a Session" class="form-button"/>
+	</form>
+
 {% endif %}
 
 </body>
